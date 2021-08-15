@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: CRMS_production
-  username: CRMS
+  username: postgres
   password: <%= ENV['CRMS_DATABASE_PASSWORD'] %>
