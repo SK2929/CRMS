@@ -1,11 +1,11 @@
 class Admin::Authenticator
-  def initialize(admin_member)
-    @admin_member = admin_member
+  def initialize(administrator)
+    @administrator = administrator
   end
 
   def authenticate(raw_password)
-    @admin_member &&
-      @admin_member.hashed_password &&
-      BCrypt::Password.new(@admin_member.hashed_password) == raw_password
+    @administrator &&
+      @administrator.hashed_password &&
+      BCrypt::Password.new(@administrator.hashed_password) == raw_password
   end
 end
